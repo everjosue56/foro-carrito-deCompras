@@ -1,0 +1,252 @@
+/* Estilos para la barra de navegación */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  .navbar ul li:last-child {
+    margin-right: 0;
+  }
+
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Estilos para el campo de búsqueda */
+  .search input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Estilos para el botón de carrito de compras */
+  .cart-button {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 20px; /* Espacio entre el campo de búsqueda y el botón de carrito de compras */
+  }
+
+
+
+
+/* contenido  p fuente de pagina*/
+  html {  
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--fuente-principal);
+  }
+  /* Contenedor de las tarjetas */
+
+  .contenedor-cards {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: space-between; /* Distribuye uniformemente las tarjetas horizontalmente con espacio entre ellas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no hay suficiente espacio */
+    flex-direction: row; /* Alinear los elementos en filas (por defecto) */
+  }
+  /* Estilos para la tarjeta */
+  .card {
+    width: calc(30.33% - 20px);
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evita que el contenido se desborde de la tarjeta */
+    transition: transform 0.3s ease; /* Añade una transición suave al pasar el ratón */
+  }
+
+  /* Estilos para la imagen */
+  .card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  /* Estilos para el contenido */
+  .contenido {
+    padding: 10px;
+  }
+
+  /* Estilos para la categoría */
+  .categoria {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para la información */
+  .info {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para el precio */
+  .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff0000;
+  }
+
+  /* Efecto de desplazamiento al pasar el ratón */
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+
+
+
+
+  body {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #fff; /* Texto en color blanco */
+    font-family: 'Roboto', sans-serif; /* Fuente de texto */
+  }
+
+  .navbar {
+    background-color: #333; /* Barra de navegación oscura */
+  }
+
+  .navbar ul li a {
+    color: #fff; /* Color de enlaces en la barra de navegación */
+    height: 40px; /* Altura de la barra de búsqueda */
+    padding: 5px 10px; /* Relleno interno */
+    font-size: 16px;
+  }
+
+  .cart-button i {
+    color: #f00; /* Color rojo para el icono del carrito de compras */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1, h2, h3 {
+    color: #ff9900; /* Colores llamativos para encabezados */
+  }
+
+  button {
+    background-color: #f17101; /* Color de fondo para botones */
+    color: #fff; /* Color de texto para botones */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #ff6600; /* Cambio de color al pasar el ratón sobre botones */
+  }
+
+
+
+
+
+  /* menu de carrito  */
+      /* Carrito modal */
+      .carrito-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+    
+    .carrito-contenido {
+        width: 500px;
+        max-width: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: #171010;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+        max-height: 85%;
+        overflow: auto;
+    }
+
+.carrito-contenido h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fcfcfc;
+  height: 20px; /* Set a specific height */
+    line-height: 20px;
+}
+
+.carrito-contenido .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fa0808;
+}
+
+.carrito-contenido .producto-en-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #0e0d0d;
+}
+
+.carrito-contenido .informacion-producto-en-carrito {
+  flex: 1;
+}
+
+.carrito-contenido .informacion-producto-en-carrito h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #f17e03;
+}
+
+.carrito-contenido .informacion-producto-en-carrito p {
+  font-size: 0.9rem;
+ color: #faf6f6;
+  margin-bottom: 5px;
+}
+
+#totalPrecio {
+  font-size: 1.2rem; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  color: #ff0000; /* Color rojo para resaltar */
+}
+
+
+#pagarButton {
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Color de texto blanco */
+  padding: 10px 20px; /* Espacio interior del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar el ratón */
+}
+
+#pagarButton:hover {
+  background-color: #45a049; /* Cambio de color al pasar el ratón */
+}
+
+
+

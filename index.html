@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>
+          ElectronicaYz.com
+     </title>
+     <link rel="stylesheet" href="css/cards.css">  
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+       <!-- menu barra -->
+   <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">inicio</a></li>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contactanos</a></li>
+          <li class="search">
+            <input type="text" name="search" id="search" placeholder="Search this website">
+          </li>
+          <li class="cart-button">
+            <a href="#" onclick="mostrarCarrito()"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+   <!-- Cuadro de carrito o menu-->
+<div class="carrito-modal" id="carritoModal">
+   <div class="carrito-contenido">
+     <span class="close" onclick="cerrarCarrito()">&times;</span>
+     <h2>Carrito de Compras</h2>
+     <div id="carritoProductos">
+       <!-- Aquí se mostrarán los productos agregados al carrito -->
+       
+     </div>
+     <div id="totalPrecio">
+       <!-- Aquí se mostrará el precio total -->
+       Total: $<span id="totalAmount">0.00</span>
+     </div>
+     <button id="pagarButton" onclick="pagar()">Pagar</button>
+   </div>
+ </div>
+
+    <script src="./js/app2.js"></script>
+    <!-- <script src="./js/jsapp2.js"></script> -->
+
+      <!-- inicio de cards  -->
+   <div class="contenedor-cards">
+     <div class = "card">
+        <img src="img/image.png">
+     <div class="contenido">
+        <p class="categoria_laptos"> Laptop Gamer</p>
+        <p class="info"> LAPTOP HP VICTUS 15-FB1013DX/R5-7535HS APU/8GB/512GB SSD/4GB RTX 2050/15.6" FHD IPS 144HZ/NODVD/B&O/SILVER/</p>
+         <p class="precio">Unidad $1,300</p>
+         <button class="agregar-carrito" onclick="agregarAlCarrito('Laptop HP VICTUS', 1300 )">Agregar al carrito</button>
+          
+       </div>
+       </div>
+        <!-- fin card 1 -->
+      <div class = "card">
+         <img src="img/imagemsi.png">
+      <div class="contenido">
+         <p class="categoria_laptos"> Laptop Gamer</p>
+         <p class="info"> LAPTOP MSI KATANA 15 B12VGK-813US/i7-12650H/16GB/1TB SSD/8GB RTX4070/15.6" FHD 144Hz/NEGRA/WIN11/BACKLIT</p>
+         <p class="precio">Unidad $1,900</p>
+         <button class="agregar-carrito" onclick="agregarAlCarrito('Laptop MSI Katana', 1900)">Agregar al carrito</button>
+         
+       </div>
+         <!-- fin card 2 -->
+   </div>   
+     <div class = "card">
+      <img src="img/alienware.png">
+   <div class="contenido">
+      <p class="categoria_laptos"> Laptop Gamer</p>
+      <p class="info"> lLAPTOP DELL ALIENWARE M15 R7 GAMING/R9-6900HX/16GB/1TB SSD/8GB RTX3070Ti/15.6" 165Hz 3ms/NEGRA/WIN11/INS0141517-R0022548-SA   </p>
+      <p class="precio">Unidad $1,900</p> 
+      <button class="agregar-carrito" onclick="agregarAlCarrito('Laptop DELL ALIENWARE', 1900)">Agregar al carrito</button>
+     
+   </div>
+   </div>   
+    <!-- fin card 3 -->
+   <div class = "card">
+      <img src="img/dellG15.png">
+   <div class="contenido">
+      <p class="categoria_laptos"> Laptop Gamer</p>
+      <p class="info" >LAPTOP DELL G15 5525 GAMING/R9-6900HX/16GB/1TB SSD/6GB RTX3060/15.6" FHD 165Hz/WIN11/ INS0162412-R0022566</p>
+      <p class="precio">Unidad $1,400</p> 
+      <button class="agregar-carrito" onclick="agregarAlCarrito('Laptop DELL G15', 1400)">Agregar al carrito</button>
+      
+   </div>
+   </div>   
+   <!-- fin card 4 -->
+    <div class = "card">
+      <img src="img/lenovo.png">
+   <div class="contenido">
+      <p class="categoria_laptos"> Laptop Gamer</p>
+      <p class="info"> LAPTOP LENOVO IP GAMING 3 15IAH7/i5-12450H/8GB/512GB/4GB RTX3050/15.6" FHD/ONYX GREY</p>
+      <p class="precio">Unidad $800</p> 
+      <button class="agregar-carrito" onclick="agregarAlCarrito('Laptop LENOVO IP', 800)">Agregar al carrito</button>
+       
+   </div>
+   </div>
+      <!-- fin card 5 -->
+   <div class = "card">
+      <img src="img/imageTUF.png">
+   <div class="contenido">
+      <p class="categoria_laptos"> Laptop Gamer</p>
+      <p class="info"> LAPTOP ASUS TUF FX50 / PROCESADOR INTEL CORE i7-12700H / RAM 16GB / 1TB SSD DISCO SOLIDO / GRAFICA 4GB RTX 3050 / PANTALLA 15.6" FHD WV</p>
+      <p class="precio">Unidad $1,300</p> 
+      <button class="agregar-carrito" onclick="agregarAlCarrito('Laptop ASUS TUF', 1300)">Agregar al carrito</button>
+       
+   </div>
+   </div>
+   <!-- fin card 6 -->
+   </div>   
+   
+  </body>
+</html>
